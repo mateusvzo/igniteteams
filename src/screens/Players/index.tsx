@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { useRoute } from "@react-navigation/native";
 
@@ -29,6 +29,10 @@ export function Players() {
     setPlayers(prevPlayers => [...prevPlayers, name])
     setName('')
   }
+
+  useEffect(() => {
+    
+  }, [players])
 
   return (
     <Container>
